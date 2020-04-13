@@ -21,7 +21,9 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="light-content" />
       {/* <Sandbox /> */}
-      <BottomNavigation />
+      <SafeAreaView style={{flex: 1}}>
+        <BottomNavigation />
+      </SafeAreaView>
     </>
   );
 };
