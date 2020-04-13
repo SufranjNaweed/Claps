@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {Card, Button, Icon} from 'react-native-elements'
 
-const  ClapsCard = ({data}) => {
+import {FavoriteContext} from '../../Contexts/Favorites';
+
+const  ClapsCard = ({data, typeOfMedia}) => {
     const dataItem = data.item;
     const image = dataItem.images.downsized.url;
-    const text = dataItem.title
+    const text = dataItem.title;
+
+    const { toggleToFavorites } = useContext(FavoriteContext);
+
+    const actionToggleToFavorite = () => {
+        console.log('actionToggleToFavorite');
+        toggleToFavorites(typeOfMedia, data);
+    }
 
     return(
         <Card
@@ -21,11 +30,13 @@ const  ClapsCard = ({data}) => {
                     icon={<Icon name='heart' type='material-community' color='#ffffff' />}
                     buttonStyle={[styles.actionButton, {backgroundColor: "red"}]}
                     title='' 
+                    onPress={() => actionToggleToFavorite()}
                 />
                 <Button
                     icon={<Icon name='link-variant' type='material-community' color='#ffffff' />}
                     buttonStyle={styles.actionButton}
                     title='' 
+                    
                 />
             </View>
         </Card>

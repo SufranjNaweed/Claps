@@ -15,6 +15,7 @@ import {
 
 import Sandbox from './src/Components/Sandbox';
 import BottomNavigation from './src/Navigation/BottomNavigation';
+import FavoriteContextProvider from './src/Contexts/Favorites';
 
 const App: () => React$Node = () => {
   return (
@@ -22,7 +23,9 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="light-content" />
       {/* <Sandbox /> */}
       <SafeAreaView style={{flex: 1}}>
-        <BottomNavigation />
+        <FavoriteContextProvider>
+          <BottomNavigation />
+        </FavoriteContextProvider>
       </SafeAreaView>
     </>
   );

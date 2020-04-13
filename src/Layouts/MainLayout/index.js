@@ -9,7 +9,7 @@ const MainLayout = (props) => {
         <>
             <Header screenTitle={props.screenTitle}/>
             <View style={styles.mainContainer}>
-                {props.children}
+                    {props.children}
             </View>
         </>
     );
