@@ -4,8 +4,22 @@ export const ThemeContext = createContext();
 
 const ThemeContextProvider = (props) => {
     const [isLightTheme, setIsLightTheme] = useState(true);
-    const light = {color : '', ui : '', bg : ''};
-    const dark  = {color : '', ui : '', bg : ''}
+    const light = {
+        primary : '',
+        primaryVariant : '',
+        secondary : '',
+        surface : '', 
+        bg : '',
+        error : ''
+    };
+    const dark  = {
+        primary : '',
+        primaryVariant : '',
+        secondary : '',
+        surface : '', 
+        bg : '',
+        error : ''
+    };
     let theme = isLightTheme ? light :  dark;
 
     toggleTheme = () => {
