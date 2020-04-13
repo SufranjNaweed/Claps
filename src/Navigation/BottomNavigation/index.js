@@ -32,10 +32,10 @@ const BottomNavigation = () => {
             name="Search"
             component={Search}
             options={{
-            tabBarLabel: 'Search',
-            tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="search-web" color={color} size={26} />
-            ),
+                tabBarLabel: 'Search',
+                tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="search-web" color={color} size={26} />
+                ),
             }}
         />
         <Tab.Screen
