@@ -11,21 +11,22 @@ import Profile from '../../Screens/Profile';
 const Tab = createMaterialBottomTabNavigator();
 
 const BottomNavigation = () => {
-  return (
+    return (
     <NavigationContainer>
         <Tab.Navigator
-        initialRouteName="Trends"
-        activeColor="#fff"
-        style={{ backgroundColor: '#000000' }}
+            initialRouteName="Trends"
+            activeColor="black"
+            inactiveColor="black"
+            barStyle={{ backgroundColor: '#fff' }}
         >
         <Tab.Screen
             name="Trends"
             component={Trends}
             options={{
-            tabBarLabel: 'Trends',
-            tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="fire" color={color} size={26} />
-            ),
+                tabBarLabel: 'Trends',
+                tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="fire" color={color} size={26} />
+                ),
             }}
         />
         <Tab.Screen
@@ -42,20 +43,20 @@ const BottomNavigation = () => {
             name="Favorites"
             component={Favorites}
             options={{
-            tabBarLabel: 'Favorites',
-            tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="heart" color={color} size={26} />
-            ),
+                tabBarLabel: 'Favorites',
+                tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="heart" color={color} size={26} />
+                ),
             }}
         />
         <Tab.Screen
             name="Profile"
             component={Profile}
             options={{
-            tabBarLabel: 'Profile',
-            tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="account" color={color} size={26} />
-            ),
+                tabBarLabel: 'Profile',
+                tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="account" color={color} size={26} />
+                ),
             }}
         />
         </Tab.Navigator>
