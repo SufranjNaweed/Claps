@@ -64,7 +64,7 @@ export default function Trends() {
                         <FlatList 
                             data={gifs} 
                             keyExtractor={gif => gif.id} 
-                            renderItem={(gif) => <ClapsCard data={gif} typeOfMedia="gifs" />}
+                            renderItem={(gif) => <ClapsCard data={gif} typeOfMedia="gifs" isFav={false} />}
                         />
                     </View>
                 ) : (
@@ -72,7 +72,7 @@ export default function Trends() {
                         <FlatList 
                             data={stickers} 
                             keyExtractor={sticker => sticker.id} 
-                            renderItem={(sticker) => <ClapsCard data={sticker} typeOfMedia="stickers" />}
+                            renderItem={(sticker) => <ClapsCard data={sticker} typeOfMedia="stickers" isFav={false} />}
                         />
                     </View>
                 )
