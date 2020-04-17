@@ -14,7 +14,7 @@ const BottomNavigation = () => {
     <NavigationContainer>
         <Tab.Navigator
             initialRouteName="Trends"
-            activeColor="black"
+            activeColor="blue"
             inactiveColor="black"
             barStyle={{ backgroundColor: '#fff' }}
         >
