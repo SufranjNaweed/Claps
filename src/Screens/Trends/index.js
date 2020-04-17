@@ -21,8 +21,7 @@ export default function Trends() {
                 setGifs(res.data.data);
                 return res.data.data;
             });
-            console.log("getGifs", gifs)
-            
+
             return gifs;
         }
         catch(err){
