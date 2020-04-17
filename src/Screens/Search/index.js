@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {FlatList, Text, View, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {FlatList, View, StyleSheet} from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 import MainLayout from '../../Layouts/MainLayout';
 import ClapsCard from '../../Components/ClapsCard';
 

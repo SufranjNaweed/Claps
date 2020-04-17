@@ -6,7 +6,6 @@ import MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunity
 import Trends from '../../Screens/Trends';
 import Search from '../../Screens/Search';
 import Favorites from '../../Screens/Favorites';
-import Profile from '../../Screens/Profile';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -46,16 +45,6 @@ const BottomNavigation = () => {
                 tabBarLabel: 'Favorites',
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name="heart" color={color} size={26} />
-                ),
-            }}
-        />
-        <Tab.Screen
-            name="Profile"
-            component={Profile}
-            options={{
-                tabBarLabel: 'Profile',
-                tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="account" color={color} size={26} />
                 ),
             }}
         />
