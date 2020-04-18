@@ -20,7 +20,7 @@ import FavoriteContextProvider from './src/Contexts/Favorites';
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="dark-content" backgroundColor="white" />
       {/* <Sandbox /> */}
       <SafeAreaView style={{flex: 1}}>
         <FavoriteContextProvider>

@@ -13,7 +13,7 @@ export default function Favorites() {
     return (
         <MainLayout screenTitle='Favorites'>
             <View style={{flex: 1}}>
-                <Text style={{textAlign: "center", fontSize: 20}}>Number of favorites gifs : {lenFavGifs} </Text>
+                <Text style={{textAlign: "center", fontSize: 20, letterSpacing: 2}}>Number of favorites gifs : {lenFavGifs} </Text>
                 <FlatList 
                     data={favoritesGifs} 
                     keyExtractor={favoritesGif => favoritesGif.id} 

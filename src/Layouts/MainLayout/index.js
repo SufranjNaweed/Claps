@@ -14,5 +14,5 @@ const MainLayout = (props) => {
         </>
     );
 }
- 
+
 export default MainLayout;

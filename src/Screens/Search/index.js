@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FlatList, View, StyleSheet} from 'react-native';
+import {FlatList, View, ActivityIndicator, Text, StyleSheet} from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -54,6 +54,14 @@ export default function Search() {
                     />
                 </View>
             </View>
+            {
+                isLoading ? (
+                    <View style={{flex: 1, alignItems: "center", justifyContent : 'center'}}>
+                        <ActivityIndicator size="large" color="#0000ff"/>
+                        <Text style={{textAlign : "center", fontSize : 22, fontWeight: "bold", letterSpacing: 4 ,marginTop: 30}}>🔍 Loading Gifs 🎁</Text>
+                    </View>
+                ) : (<></>) 
+            }
             <View style={{flex : 2}}>
                 <FlatList 
                     data={searchResults} 
