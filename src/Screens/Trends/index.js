@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {FlatList, View} from 'react-native';
+import {FlatList, ActivityIndicator, Text, View} from 'react-native';
 import MainLayout from '../../Layouts/MainLayout';
 import ClapsCard from '../../Components/ClapsCard';
 import axios from 'axios';
@@ -31,12 +31,22 @@ export default function Trends() {
 
     return (
         <MainLayout screenTitle='Trends'>
-            <View style={{flex: 1}}>
-                <FlatList 
-                    data={gifs} 
-                    keyExtractor={gif => gif.id} 
-                    renderItem={(gif) => <ClapsCard data={gif} typeOfMedia="gifs" isFav={false} />}
-                />
+            <View style={{flex: 1}}>                
+                {
+                    gifs.length > 0 ?          
+                    (
+                        <FlatList 
+                            data={gifs} 
+                            keyExtractor={gif => gif.id} 
+                            renderItem={(gif) => <ClapsCard data={gif} typeOfMedia="gifs" isFav={false} />}
+                        />
+                    ) : (
+                        <View style={{flex: 1, alignItems: "center", justifyContent : 'center'}}>
+                            <ActivityIndicator size="large" color="#0000ff"/>
+                            <Text style={{textAlign : "center", fontSize : 22, fontWeight: "bold", letterSpacing: 4 ,marginTop: 30}}>🔥 Loading Trendy Gifs 🚀</Text>
+                        </View>
+                    )
+                }
             </View>
         </MainLayout>
     );
