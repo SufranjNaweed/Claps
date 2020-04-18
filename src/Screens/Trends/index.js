@@ -43,7 +43,7 @@ export default function Trends() {
                     ) : (
                         <View style={{flex: 1, alignItems: "center", justifyContent : 'center'}}>
                             <ActivityIndicator size="large" color="#0000ff"/>
-                            <Text style={{textAlign : "center", fontSize : 22, fontWeight: "bold", letterSpacing: 4 ,marginTop: 30}}>🔥 Loading Trendy Gifs 🚀</Text>
+                            <Text style={{textAlign : "center", fontSize : 22, fontWeight: "bold", letterSpacing: 2 ,marginTop: 30}}>🔥 Loading Trendy Gifs 🚀</Text>
                         </View>
                     )
                 }
